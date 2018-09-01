@@ -13,7 +13,9 @@ func _physics_process(delta):
 	# Move the enemy forward with the camera so all speeds can be set relative to the camera
 	move(delta)
 
+# Override this method to implement moving behavior
 func move(delta):
+	# Move the enemy 200 upward to ensure movement is relative to the camera
 	move_amount.y -= 200 * delta
 	position += move_amount
 
