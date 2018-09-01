@@ -8,4 +8,11 @@ func _ready():
 	pass
 
 func kill():
-	print("enemy killed")
+	#TODO: Start the death timer, play a death animation(explosion), play a death sound
+	queue_free()
+
+
+func _on_enemy_body_entered(body):
+	if body.has_method("kill"):
+		body.kill()
+	kill()

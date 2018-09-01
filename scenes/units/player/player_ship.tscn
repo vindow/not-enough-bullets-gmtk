@@ -7,11 +7,10 @@
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
-points = PoolVector2Array( 0, -6, 7, 1, 7, 7, 0, 4, -7, 7, -7, 1 )
+points = PoolVector2Array( 0, -12, 14, 2, 14, 14, 0, 8, -14, 14, -14, 2 )
 
 [node name="player_ship" type="Area2D"]
 
-scale = Vector2( 2, 2 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -24,9 +23,6 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="player_barrier" parent="." index="0" instance=ExtResource( 2 )]
-
-position = Vector2( 0, -9 )
-_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 

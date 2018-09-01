@@ -18,6 +18,18 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+	process_movement(delta)
+	# Check if the player is using the barrier and if they can
+	if Input.is_action_pressed("use_barrier") and barrier_time > 0:
+		get_node("player_barrier").enable()
+		barrier_time -= delta
+		barrier_recharge_timer = 0.0
+	else:
+		get_node("player_barrier").disable()
+		recharge_barrier(delta)
+
+# Gets player input and moves the player based on that input
+func process_movement(delta):
 	# create a temporary variable to get the desired movement direction
 	var move_direction = Vector2(0,0)
 	
@@ -42,23 +54,18 @@ func _physics_process(delta):
 		position += move_direction * throttled_velocity * delta
 	else:
 		position += move_direction * velocity * delta
-	
-	# Check if the player is using the barrier and if they can
-	if Input.is_action_pressed("use_barrier") and barrier_time > 0:
-		get_node("player_barrier").enable()
-		barrier_time -= delta
-		barrier_recharge_timer = 0.0
+		
+# Recharges the barrier if the recharge timer condition is met
+func recharge_barrier(delta):
+	# Check if can recharge
+	if barrier_recharge_timer >= barrier_recharge_cd:
+		barrier_time += delta * barrier_recharge_rate
+		# Clamp the barrier_time if it exceeds the max
+		if barrier_time > max_barrier_time:
+			barrier_time = max_barrier_time
 	else:
-		get_node("player_barrier").disable()
-		# Check if can recharge
-		if barrier_recharge_timer >= barrier_recharge_cd:
-			barrier_time += delta * barrier_recharge_rate
-			# Clamp the barrier_time if it exceeds the max
-			if barrier_time > max_barrier_time:
-				barrier_time = max_barrier_time
-		else:
-			#tick up the barrier recharge timer instead
-			barrier_recharge_timer += delta
+		#tick up the barrier recharge timer instead
+		barrier_recharge_timer += delta
 
 func die():
 	print("player hit by enemy!")
