@@ -19,6 +19,7 @@ func move(delta):
 	move_amount.y -= 200 * delta
 	position += move_amount
 
+
 func kill():
 	#TODO: Start the death timer, play a death animation(explosion), play a death sound
 	queue_free()

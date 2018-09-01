@@ -26,7 +26,9 @@ func enable():
 
 func _on_player_barrier_area_entered(area):
 	# TODO: Destroy the enemy area and spawn a ship projectile
-	if area.has_method("kill"):
+	if area.has_method("take_hit"):
+		area.take_hit()
+	elif area.has_method("kill"):
 		area.kill()
 		spawn_projectile(area)
 	pass # replace with function body

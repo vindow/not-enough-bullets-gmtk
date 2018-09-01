@@ -37,6 +37,7 @@ throttle_move=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_n
 
 2d_physics/layer_1="player"
 2d_physics/layer_2="enemy"
+2d_physics/layer_3="large_enemy"
 
 [rendering]
 
