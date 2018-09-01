@@ -23,4 +23,8 @@ texture = ExtResource( 3 )
 
 shape = SubResource( 1 )
 
+[node name="SpawnNotifier" parent="." index="2"]
+
+rect = Rect2( -32, -32, 64, 64 )
+
 

@@ -20,6 +20,21 @@ velocity = 400.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+[node name="SpawnNotifier" type="VisibilityNotifier2D" parent="." index="2"]
+
+rect = Rect2( -16, -16, 32, 32 )
+
+[node name="SpawnTimer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
 [connection signal="body_entered" from="." to="." method="_on_enemy_body_entered"]
+
+[connection signal="screen_exited" from="SpawnNotifier" to="." method="_on_SpawnNotifier_screen_exited"]
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
 
 

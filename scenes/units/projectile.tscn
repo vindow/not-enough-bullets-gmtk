@@ -38,4 +38,12 @@ position = Vector2( -2.7, 0 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
+[node name="despawn_notifier" type="VisibilityNotifier2D" parent="." index="2"]
+
+position = Vector2( -2.5, 0 )
+rect = Rect2( -16, -16, 32, 32 )
+_sections_unfolded = [ "Transform" ]
+
+[connection signal="screen_exited" from="despawn_notifier" to="." method="_on_despawn_notifier_screen_exited"]
+
 

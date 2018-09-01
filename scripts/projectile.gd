@@ -17,4 +17,10 @@ func _integrate_forces(state):
 
 func kill():
 	#TODO: Start a death timer, play an explosion sound and animation
+	despawn()
+	
+func despawn():
 	queue_free()
+
+func _on_despawn_notifier_screen_exited():
+	despawn()

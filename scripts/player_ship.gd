@@ -12,10 +12,14 @@ var barrier_recharge_timer = 1.0
 # Rate at which the barrier recharges (multiplied with delta)
 var barrier_recharge_rate = 0.75
 
+var camera = null
+var h_offset = 0
+var w_offset = 0
+
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	camera = get_parent().get_node("camera")
+	h_offset = get_node("Sprite").texture.get_height() / 2
+	w_offset = get_node("Sprite").texture.get_width() / 2
 
 func _physics_process(delta):
 	process_movement(delta)
@@ -54,9 +58,24 @@ func process_movement(delta):
 		position += move_direction * throttled_velocity * delta
 	else:
 		position += move_direction * velocity * delta
+	
 	# Move the player forward with the camera regardless of input
 	position.y -= 200 * delta
+	
+	# Check if the player is offscreen, move them back if they are
+	var camera_pos = camera.position
+	var camera_size = get_viewport_rect().size
+	
+	if position.y + h_offset > camera_pos.y + camera_size.y:
+		position.y = camera_pos.y + camera_size.y - h_offset
+	elif position.y - h_offset < camera_pos.y:
+		position.y = camera_pos.y + h_offset
 		
+	if position.x + w_offset > camera_pos.x + camera_size.x:
+		position.x = camera_pos.x + camera_size.x - w_offset
+	elif position.x - w_offset < camera_pos.x:
+		position.x = camera_pos.x + w_offset
+
 # Recharges the barrier if the recharge timer condition is met
 func recharge_barrier(delta):
 	# Check if can recharge
