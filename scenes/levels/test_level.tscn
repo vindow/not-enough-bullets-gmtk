@@ -1,14 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/level.gd" type="Script" id=1]
 [ext_resource path="res://scenes/units/player/player_ship.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/units/enemies/enemy_grunt.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/images/background_star_xl.png" type="Texture" id=4]
-[ext_resource path="res://assets/images/background_star_l.png" type="Texture" id=5]
-[ext_resource path="res://assets/images/background_star_m.png" type="Texture" id=6]
-[ext_resource path="res://assets/images/background_star_s.png" type="Texture" id=7]
-[ext_resource path="res://assets/images/background_star_xs.png" type="Texture" id=8]
-[ext_resource path="res://scenes/units/enemies/enemy_asteroid.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/units/enemies/enemy_asteroid.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/units/enemies/enemy_circle.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/units/enemies/enemy_large.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/units/enemies/enemy_sneaky.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/units/enemies/enemy_wavy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/images/background_star_xl.png" type="Texture" id=9]
+[ext_resource path="res://assets/images/background_star_l.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/background_star_m.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/background_star_s.png" type="Texture" id=12]
+[ext_resource path="res://assets/images/background_star_xs.png" type="Texture" id=13]
 
 [node name="test_level" type="Node2D" index="0"]
 
@@ -25,35 +29,26 @@ position = Vector2( 442.04, 343.84 )
 velocity = 0
 direction = Vector2( 0, 1 )
 
-[node name="grunt_enemy2" parent="." index="2" instance=ExtResource( 3 )]
+[node name="enemy_asteroid" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 685.577, 283.567 )
+position = Vector2( 548.799, 315.529 )
 velocity = 0
-direction = Vector2( 0, 1 )
 
-[node name="grunt_enemy3" parent="." index="3" instance=ExtResource( 3 )]
+[node name="enemy_circle" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 317.42, 198.858 )
-velocity = 0
-direction = Vector2( 0, 1 )
+position = Vector2( 430.936, 214.854 )
 
-[node name="grunt_enemy4" parent="." index="4" instance=ExtResource( 3 )]
+[node name="enemy_large" parent="." index="4" instance=ExtResource( 6 )]
 
-position = Vector2( 527.563, 200.487 )
-velocity = 0
-direction = Vector2( 0, 1 )
+position = Vector2( 324.988, 277.747 )
 
-[node name="grunt_enemy5" parent="." index="5" instance=ExtResource( 3 )]
+[node name="enemy_sneaky" parent="." index="5" instance=ExtResource( 7 )]
 
-position = Vector2( 323.122, 340.582 )
-velocity = 0
-direction = Vector2( 0, 1 )
+position = Vector2( 584.001, 164.53 )
 
-[node name="grunt_enemy6" parent="." index="6" instance=ExtResource( 3 )]
+[node name="enemy_wavy" parent="." index="6" instance=ExtResource( 8 )]
 
-position = Vector2( 657.07, 378.05 )
-velocity = 0
-direction = Vector2( 0, 1 )
+position = Vector2( 347.794, 139.281 )
 
 [node name="camera" type="Camera2D" parent="." index="7"]
 
@@ -107,7 +102,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_xl" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 4 )
+texture = ExtResource( 9 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
 _sections_unfolded = [ "Region" ]
@@ -122,7 +117,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_l" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 5 )
+texture = ExtResource( 10 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
 
@@ -136,7 +131,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_m" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 6 )
+texture = ExtResource( 11 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
 
@@ -150,7 +145,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_s" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 7 )
+texture = ExtResource( 12 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
 
@@ -164,13 +159,8 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_xs" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 8 )
+texture = ExtResource( 13 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
-
-[node name="enemy_asteroid" parent="." index="9" instance=ExtResource( 9 )]
-
-position = Vector2( 548.799, 315.529 )
-velocity = 0
 
 
