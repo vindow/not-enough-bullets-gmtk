@@ -19,17 +19,21 @@ func move(delta):
 		attack_delay -= delta
 	else:
 		if not locked_on:
+			# Get the angle that points unit to the player
 			desired_angle = (position - get_parent().get_node("player_ship").position).angle() + PI
+			# Check if on target. Some leniency added due to floats almost never being equal
 			if rotation > desired_angle - PI / 30 and rotation < desired_angle + PI / 30:
 				locked_on = true
+			#Otherwise turn towards the target
 			elif rotation < desired_angle:
 				rotation += turn_speed * delta
 			elif rotation > desired_angle:
 				rotation -= turn_speed * delta
-			
+			# Move towards the target
 			direction = Vector2(cos(rotation), sin(rotation)).normalized()
 			move_amount = direction * velocity_while_turning * delta
 		else:
+			# If on target dash towards the player
 			direction = Vector2(cos(rotation), sin(rotation)).normalized()
 			move_amount = direction * velocity * delta
 	.move(delta)
