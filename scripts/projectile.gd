@@ -14,3 +14,7 @@ func _ready():
 
 func _integrate_forces(state):
 	state.angular_velocity = spin_direction * torque
+
+func kill():
+	#TODO: Start a death timer, play an explosion sound and animation
+	queue_free()

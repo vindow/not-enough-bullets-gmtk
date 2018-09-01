@@ -54,6 +54,8 @@ func process_movement(delta):
 		position += move_direction * throttled_velocity * delta
 	else:
 		position += move_direction * velocity * delta
+	# Move the player forward with the camera regardless of input
+	position.y -= 200 * delta
 		
 # Recharges the barrier if the recharge timer condition is met
 func recharge_barrier(delta):

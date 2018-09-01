@@ -6,6 +6,10 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	pass
+	
+func _physics_process(delta):
+	# Move the enemy forward with the camera so all speeds can be set relative to the camera
+	position.y -= 200 * delta
 
 func kill():
 	#TODO: Start the death timer, play a death animation(explosion), play a death sound
