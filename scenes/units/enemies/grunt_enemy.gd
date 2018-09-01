@@ -1,10 +1,9 @@
-extends Area2D
+extends "res://scripts/enemy.gd"
 
-export var velocity = 600
 export var direction = Vector2(0, 0)
 
 func _ready():
-	pass
+	rotation = direction.angle()
 
 func _physics_process(delta):
 	position += direction * velocity * delta

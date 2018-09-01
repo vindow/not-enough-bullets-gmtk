@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 points = PoolVector2Array( 0, -6, 7, 1, 7, 7, 0, 4, -7, 7, -7, 1 )
 
-[node name="player_ship" type="Area2D" index="0"]
+[node name="player_ship" type="Area2D"]
 
 scale = Vector2( 2, 2 )
 input_pickable = true
@@ -17,15 +17,16 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="player_barrier" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 0, -9 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
@@ -35,5 +36,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
 shape = SubResource( 1 )
+
+[connection signal="area_entered" from="." to="." method="_on_player_ship_area_entered"]
 
 

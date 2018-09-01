@@ -59,3 +59,12 @@ func _physics_process(delta):
 		else:
 			#tick up the barrier recharge timer instead
 			barrier_recharge_timer += delta
+
+func die():
+	print("player hit by enemy!")
+	# TODO: Destroy the player, decrement a life, game over if no lives left
+	pass
+
+# On collision with enemy
+func _on_player_ship_area_entered(area):
+	die()

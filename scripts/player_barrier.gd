@@ -20,3 +20,10 @@ func enable():
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
+
+
+func _on_player_barrier_area_entered(area):
+	# TODO: Destroy the enemy area and spawn an ship projectile
+	if area.has_method("kill"):
+		area.kill()
+	pass # replace with function body

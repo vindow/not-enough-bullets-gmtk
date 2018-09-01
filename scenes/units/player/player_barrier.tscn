@@ -8,13 +8,14 @@
 custom_solver_bias = 0.0
 points = PoolVector2Array( -10.5, -6.5, -6, -10, 6, -10, 10.5, -6.5, 10.5, -3.5, 7.5, -3.5, 3.5, -6.5, -3.5, -6.5, -7.5, -3.5, -10.5, -3.5 )
 
-[node name="player_barrier" type="Area2D" index="0"]
+[node name="player_barrier" type="Area2D"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision_mask = 2
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
@@ -22,6 +23,7 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
+visible = false
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -31,5 +33,7 @@ position = Vector2( 0, 6.5 )
 shape = SubResource( 1 )
 disabled = true
 _sections_unfolded = [ "Transform" ]
+
+[connection signal="area_entered" from="." to="." method="_on_player_barrier_area_entered"]
 
 
