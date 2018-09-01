@@ -1,7 +1,7 @@
 extends Area2D
 
 var projectile = preload("res://scenes/units/projectile.tscn")
-var pvelocity = 600;
+var pvelocity = 700;
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
@@ -50,4 +50,4 @@ func calculate_launch_angle(enemy):
 	# Get the normal of the collision vector
 	var normal = (enemy.position - get_parent().position).normalized().tangent()
 	# Reflect the enemy's current angle off the normal
-	return Vector2(cos(angle), sin(angle)).reflect(normal)
+	return Vector2(cos(angle), sin(angle)).reflect(normal).normalized()
