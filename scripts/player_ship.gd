@@ -4,13 +4,14 @@ var velocity = 350
 var throttled_velocity = 250
 
 # Variables to track how much barrier is left
-var max_barrier_time = 4.0
-var barrier_time = 4.0
+var max_barrier_time = 3.0
+var barrier_time = 3.0
 # Variables to track when to start recharging when the barrier is not active
 var barrier_recharge_cd = 1.0
 var barrier_recharge_timer = 1.0
 # Rate at which the barrier recharges (multiplied with delta)
-var barrier_recharge_rate = 0.75
+var barrier_recharge_rate = 3.0
+signal barrier_change(charge)
 
 var camera = null
 var h_offset = 0
@@ -26,7 +27,7 @@ func _physics_process(delta):
 	# Check if the player is using the barrier and if they can
 	if Input.is_action_pressed("use_barrier") and barrier_time > 0:
 		get_node("player_barrier").enable()
-		barrier_time -= delta
+		change_barrier(-delta)
 		barrier_recharge_timer = 0.0
 	else:
 		get_node("player_barrier").disable()
@@ -79,14 +80,22 @@ func process_movement(delta):
 # Recharges the barrier if the recharge timer condition is met
 func recharge_barrier(delta):
 	# Check if can recharge
-	if barrier_recharge_timer >= barrier_recharge_cd:
-		barrier_time += delta * barrier_recharge_rate
-		# Clamp the barrier_time if it exceeds the max
-		if barrier_time > max_barrier_time:
-			barrier_time = max_barrier_time
+	if barrier_recharge_timer >= barrier_recharge_cd and barrier_time < max_barrier_time:
+		change_barrier(delta * barrier_recharge_rate)
 	else:
-		#tick up the barrier recharge timer instead
+		# tick up the barrier recharge timer instead
 		barrier_recharge_timer += delta
+		
+
+func change_barrier(amount):
+	barrier_time += amount
+	# Clamp the barrier charge to be between 0 and max
+	if barrier_time > max_barrier_time:
+		barrier_time = max_barrier_time
+	elif barrier_time < 0.0:
+		barrier_time = 0.0
+	emit_signal("barrier_change", barrier_time)
+
 
 func die():
 	print("player hit by enemy!")

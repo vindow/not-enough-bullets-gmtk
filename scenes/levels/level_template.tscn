@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/level.gd" type="Script" id=1]
-[ext_resource path="res://scenes/units/player/player_ship.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/images/background_star_xl.png" type="Texture" id=3]
-[ext_resource path="res://assets/images/background_star_l.png" type="Texture" id=4]
-[ext_resource path="res://assets/images/background_star_m.png" type="Texture" id=5]
-[ext_resource path="res://assets/images/background_star_s.png" type="Texture" id=6]
-[ext_resource path="res://assets/images/background_star_xs.png" type="Texture" id=7]
+[ext_resource path="res://scenes/UI/HUD.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/units/player/player_ship.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/images/background_star_xl.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/background_star_l.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/background_star_m.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/background_star_s.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/background_star_xs.png" type="Texture" id=8]
 
 [node name="test_level" type="Node2D"]
 
@@ -15,6 +16,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="camera" type="Camera2D" parent="." index="0"]
 
+z_index = 1
 offset = Vector2( 512, 300 )
 anchor_mode = 1
 rotating = false
@@ -38,9 +40,11 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="player_ship" parent="." index="1" instance=ExtResource( 2 )]
+[node name="HUD" parent="camera" index="0" instance=ExtResource( 2 )]
+
+[node name="player_ship" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 504.005, 545.424 )
 
@@ -69,7 +73,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_xl" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
 _sections_unfolded = [ "Region" ]
@@ -84,7 +88,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_l" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
 
@@ -98,7 +102,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_m" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
 
@@ -112,7 +116,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_s" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
 
@@ -126,7 +130,7 @@ _sections_unfolded = [ "Motion" ]
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/stars_xs" index="0"]
 
 position = Vector2( 0, -4700 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 1024, 10000 )
 
@@ -136,6 +140,8 @@ process_mode = 1
 wait_time = 0.25
 one_shot = false
 autostart = true
+
+[connection signal="barrier_change" from="player_ship" to="camera/HUD" method="_on_player_ship_barrier_change"]
 
 [connection signal="timeout" from="asteroid_timer" to="." method="_on_asteroid_timer_timeout"]
 
