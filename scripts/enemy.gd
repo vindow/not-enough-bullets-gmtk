@@ -1,7 +1,7 @@
 extends Area2D
 
 # Variable for enemy velocity relative to camera
-export var velocity = 400
+export var velocity = 400.0
 var direction = Vector2(0, 0)
 
 var move_amount = Vector2(0, 0)
