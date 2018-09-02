@@ -2,13 +2,10 @@ extends Area2D
 
 var projectile = preload("res://scenes/units/projectile.tscn")
 var pvelocity = 700;
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+
+signal hit_enemy
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
 	pass
 
 func disable():
@@ -18,22 +15,24 @@ func disable():
 func enable():
 	get_node("CollisionShape2D").disabled = false
 	get_node("Sprite").visible = true
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
 
 
 func _on_player_barrier_area_entered(area):
 	# TODO: Destroy the enemy area and spawn a ship projectile
 	if area.has_method("take_hit"):
-		area.take_hit()
-	elif area.has_method("kill"):
-		area.kill()
+		pass
+	elif area.has_method("shield_kill"):
+		#print("Hit enemy position" + String(area.position))
+		area.shield_kill()
 		spawn_projectile(area)
-	pass # replace with function body
+		emit_signal("hit_enemy")
 
 func spawn_projectile(enemy):
+	randomize()
+	if randi() % 2 == 0:
+		get_node("shield_hit_1").play()
+	else:
+		get_node("shield_hit_2").play()
 	# Get the texture to set the projectile to
 	var enemy_tex = enemy.get_node("Sprite").texture
 	# Instantiate the projectile and set it's position, rotation, and texture
@@ -44,8 +43,8 @@ func spawn_projectile(enemy):
 	
 	# Apply an impulse to the projectile based on barrier hit location
 	pinstance.apply_impulse(Vector2(0, 0), pvelocity * calculate_launch_angle(enemy))
-	
 	get_parent().get_parent().add_child(pinstance)
+	
 
 func calculate_launch_angle(enemy):
 	var angle = enemy.rotation

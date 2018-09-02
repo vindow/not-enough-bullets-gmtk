@@ -9,6 +9,8 @@ var initial_rotation = 0.0
 
 func _ready():
 	initial_rotation = rotation
+	get_node("AnimationPlayer").play("thrusters")
+	score_amount = 300
 
 func move(delta):
 	# Slowly rotate

@@ -2,6 +2,7 @@ extends Area2D
 
 # Variable for enemy velocity relative to camera
 export var velocity = 400.0
+var score_amount = 100
 
 var direction = Vector2(0, 0)
 var move_amount = Vector2(0, 0)
@@ -35,11 +36,30 @@ func move(delta):
 
 func kill():
 	#TODO: Start the death timer, play a death animation(explosion), play a death sound
+	get_node("AnimationPlayer").play("explode")
+	call_deferred("set_monitoring", false)
+	call_deferred("set_monitorable", false)
+	#monitorable = false
+	randomize()
+	if randi() % 2 == 0:
+		get_node("explode_sound_1").play()
+	else:
+		get_node("explode_sound_2").play()
+	get_parent().add_score(score_amount, position)
+	despawn()
+
+
+func shield_kill():
+	#print("Enemy dying position" + String(position))
+	get_node("AnimationPlayer").play("explode_small")
+	call_deferred("set_monitoring", false)
+	call_deferred("set_monitorable", false)
+	get_parent().add_score(100, position)
 	despawn()
 
 
 func despawn():
-	queue_free()
+	get_node("kill_timer").start()
 
 
 func _on_enemy_body_entered(body):
@@ -55,3 +75,7 @@ func _on_SpawnNotifier_screen_exited():
 
 func _on_SpawnTimer_timeout():
 	has_spawned = true
+
+
+func _on_kill_timer_timeout():
+	queue_free()

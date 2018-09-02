@@ -16,11 +16,20 @@ func _integrate_forces(state):
 	state.angular_velocity = spin_direction * torque
 
 func kill():
-	#TODO: Start a death timer, play an explosion sound and animation
-	despawn()
+	get_node("AnimationPlayer").play("explode")
+	get_node("death_timer").start()
+	get_node("collision_timer").start()
 	
 func despawn():
 	queue_free()
 
 func _on_despawn_notifier_screen_exited():
 	despawn()
+
+
+func _on_death_timer_timeout():
+	despawn()
+
+
+func _on_collision_timer_timeout():
+	get_node("CollisionShape2D").queue_free()

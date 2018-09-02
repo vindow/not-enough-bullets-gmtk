@@ -1,17 +1,25 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/HUD.gd" type="Script" id=1]
-[ext_resource path="res://assets/images/player_ship.png" type="Texture" id=2]
-[ext_resource path="res://assets/fonts/Pixeled.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/fonts/Pixeled.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/images/player_ship.png" type="Texture" id=3]
 [ext_resource path="res://assets/images/energy_bar_bg.png" type="Texture" id=4]
 [ext_resource path="res://assets/images/energy_bar_fill.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=1]
 
 size = 16
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
@@ -19,17 +27,15 @@ _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 size = 20
 use_mipmaps = false
 use_filter = false
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [node name="HUD" type="Container"]
 
 anchor_left = 0.0
 anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 8.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -37,21 +43,47 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
+_sections_unfolded = [ "custom_constants" ]
 
-[node name="lives" type="Container" parent="." index="0"]
+[node name="score" type="Label" parent="." index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 1.0
-margin_right = 101.0
-margin_bottom = 46.0
+margin_left = 243.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+text = "0"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="lives" type="Container" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 123.0
+margin_bottom = 66.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
+size_flags_horizontal = 3
 size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
 
@@ -61,18 +93,16 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 12.0
-margin_top = 6.0
-margin_right = 44.0
-margin_bottom = 42.0
+margin_right = 32.0
+margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 2 )
-stretch_mode = 0
+texture = ExtResource( 3 )
+stretch_mode = 4
 _sections_unfolded = [ "Margin", "Rect" ]
 
 [node name="life_counter" type="Label" parent="lives" index="1"]
@@ -81,10 +111,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 47.0
-margin_top = -3.0
-margin_right = 82.0
-margin_bottom = 43.0
+margin_left = 36.0
+margin_right = 71.0
+margin_bottom = 46.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -98,32 +127,33 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Container" type="VBoxContainer" parent="." index="1"]
+[node name="energy" type="VBoxContainer" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 20.0
-margin_top = 323.0
-margin_right = 40.0
-margin_bottom = 583.0
+margin_top = 320.0
+margin_right = 1024.0
+margin_bottom = 580.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
-size_flags_vertical = 1
+size_flags_vertical = 0
+size_flags_stretch_ratio = 4.0
 alignment = 2
-_sections_unfolded = [ "Anchor", "Rect" ]
+_sections_unfolded = [ "Anchor", "Rect", "Size Flags" ]
 
-[node name="Label" type="Label" parent="Container" index="0"]
+[node name="Label" type="Label" parent="energy" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 20.0
+margin_right = 1004.0
 margin_bottom = 56.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -138,14 +168,14 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="energy_bar" type="TextureProgress" parent="Container" index="1"]
+[node name="energy_bar" type="TextureProgress" parent="energy" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 60.0
-margin_right = 20.0
+margin_right = 1004.0
 margin_bottom = 260.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -154,10 +184,10 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 min_value = 0.0
-max_value = 4.0
+max_value = 5.0
 step = 0.01
 page = 0.0
-value = 4.0
+value = 5.0
 exp_edit = false
 rounded = false
 texture_under = ExtResource( 4 )

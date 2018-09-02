@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fully_charged.wav-a9b58dfb82a36cb8191fe60a3440712b.sample"
+
+[deps]
+
+source_file="res://assets/sounds/fully_charged.wav"
+dest_files=[ "res://.import/fully_charged.wav-a9b58dfb82a36cb8191fe60a3440712b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

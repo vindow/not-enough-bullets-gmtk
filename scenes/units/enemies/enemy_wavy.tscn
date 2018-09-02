@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/units/enemies/enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/enemy_wavy.gd" type="Script" id=2]
 [ext_resource path="res://assets/images/enemy_ship_wavy.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/thruster_l.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -22,5 +23,12 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[node name="thruster" parent="." index="11"]
+
+position = Vector2( -23, 7.10543e-015 )
+rotation = 1.5708
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Animation", "Transform", "Visibility" ]
 
 

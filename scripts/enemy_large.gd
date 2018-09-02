@@ -1,14 +1,10 @@
 extends "res://scripts/enemy.gd"
 
-export var health = 2
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+export var health = 1
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	pass
+	get_node("AnimationPlayer").play("twin_thrusters")
+	score_amount = 500
 
 func move(delta):
 	# Move in a straight line in the direction spawned as
@@ -26,3 +22,17 @@ func _on_enemy_body_entered(body):
 	if body.has_method("kill"):
 		body.kill()
 	take_hit()
+
+func kill():
+	#TODO: Start the death timer, play a death animation(explosion), play a death sound
+	get_node("AnimationPlayer").play("explode_mega")
+	call_deferred("set_monitoring", false)
+	call_deferred("set_monitorable", false)
+	#monitorable = false
+	randomize()
+	if randi() % 2 == 0:
+		get_node("explode_sound_1").play()
+	else:
+		get_node("explode_sound_2").play()
+	get_parent().add_score(score_amount, position)
+	despawn()

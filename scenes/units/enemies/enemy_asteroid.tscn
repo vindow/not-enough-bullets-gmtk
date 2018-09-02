@@ -21,4 +21,8 @@ texture = ExtResource( 3 )
 
 shape = SubResource( 1 )
 
+[node name="thruster" parent="." index="11"]
+
+visible = true
+
 

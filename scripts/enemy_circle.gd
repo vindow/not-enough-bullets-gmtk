@@ -3,7 +3,8 @@ extends "res://scripts/enemy.gd"
 export var turn_speed = 1.0
 
 func _ready():
-	pass
+	get_node("AnimationPlayer").play("thrusters")
+	score_amount = 250
 
 func move(delta):
 	# Slowly rotate

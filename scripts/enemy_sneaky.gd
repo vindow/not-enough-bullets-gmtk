@@ -11,7 +11,8 @@ var desired_angle = 0.0
 var locked_on = false
 
 func _ready():
-	pass
+	get_node("AnimationPlayer").play("thrusters")
+	score_amount = 400
 
 func move(delta):
 	if attack_delay > 0:

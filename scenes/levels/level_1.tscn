@@ -7,1111 +7,1342 @@
 [ext_resource path="res://scenes/units/enemies/enemy_sneaky.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/units/enemies/enemy_wavy.tscn" type="PackedScene" id=6]
 
-[node name="test_level" index="0" instance=ExtResource( 1 )]
-
-[node name="ParallaxBackground" parent="." index="2"]
-
-scroll_limit_begin = Vector2( 0, -24000 )
-
-[node name="Sprite" parent="ParallaxBackground/stars_xl" index="0"]
-
-position = Vector2( 0, -11700 )
-region_rect = Rect2( 0, 0, 1024, 24000 )
-
-[node name="Sprite" parent="ParallaxBackground/stars_l" index="0"]
-
-position = Vector2( 0, -11700 )
-region_rect = Rect2( 0, 0, 1024, 24000 )
-
-[node name="Sprite" parent="ParallaxBackground/stars_m" index="0"]
-
-position = Vector2( 0, -11700 )
-region_rect = Rect2( 0, 0, 1024, 24000 )
-
-[node name="Sprite" parent="ParallaxBackground/stars_s" index="0"]
-
-position = Vector2( 0, -11700 )
-region_rect = Rect2( 0, 0, 1024, 24000 )
-
-[node name="Sprite" parent="ParallaxBackground/stars_xs" index="0"]
-
-position = Vector2( 0, -11700 )
-region_rect = Rect2( 0, 0, 1024, 24000 )
+[node name="test_level" instance=ExtResource( 1 )]
 
 [node name="enemy_circle" parent="." index="4" instance=ExtResource( 2 )]
 
-position = Vector2( 260, -1950 )
+position = Vector2( 260, -4627 )
 velocity = 600.0
 
 [node name="enemy_circle64" parent="." index="5" instance=ExtResource( 2 )]
 
-position = Vector2( 1013, -2085 )
+position = Vector2( 1013, -4762 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle7" parent="." index="6" instance=ExtResource( 2 )]
 
-position = Vector2( 212, -1950 )
+position = Vector2( 212, -4627 )
 velocity = 600.0
 
 [node name="enemy_circle38" parent="." index="7" instance=ExtResource( 2 )]
 
-position = Vector2( 965, -2085 )
+position = Vector2( 965, -4762 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle14" parent="." index="8" instance=ExtResource( 2 )]
 
-position = Vector2( 164, -1950 )
+position = Vector2( 164, -4627 )
 velocity = 600.0
 
 [node name="enemy_circle45" parent="." index="9" instance=ExtResource( 2 )]
 
-position = Vector2( 917, -2085 )
+position = Vector2( 917, -4762 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle21" parent="." index="10" instance=ExtResource( 2 )]
 
-position = Vector2( 117, -1950 )
+position = Vector2( 117, -4627 )
 velocity = 600.0
 
 [node name="enemy_circle51" parent="." index="11" instance=ExtResource( 2 )]
 
-position = Vector2( 870, -2085 )
+position = Vector2( 870, -4762 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle27" parent="." index="12" instance=ExtResource( 2 )]
 
-position = Vector2( 70, -1950 )
+position = Vector2( 70, -4627 )
 velocity = 600.0
 
 [node name="enemy_circle58" parent="." index="13" instance=ExtResource( 2 )]
 
-position = Vector2( 823, -2085 )
+position = Vector2( 823, -4762 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle33" parent="." index="14" instance=ExtResource( 2 )]
 
-position = Vector2( 23, -1950 )
+position = Vector2( 23, -4627 )
 velocity = 600.0
 
 [node name="enemy_circle54" parent="." index="15" instance=ExtResource( 2 )]
 
-position = Vector2( 776, -2085 )
+position = Vector2( 776, -4762 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle2" parent="." index="16" instance=ExtResource( 2 )]
 
-position = Vector2( 260, -2000 )
+position = Vector2( 260, -4677 )
 velocity = 600.0
 
 [node name="enemy_circle69" parent="." index="17" instance=ExtResource( 2 )]
 
-position = Vector2( 1013, -2135 )
+position = Vector2( 1013, -4812 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle11" parent="." index="18" instance=ExtResource( 2 )]
 
-position = Vector2( 212, -2000 )
+position = Vector2( 212, -4677 )
 velocity = 600.0
 
 [node name="enemy_circle40" parent="." index="19" instance=ExtResource( 2 )]
 
-position = Vector2( 965, -2135 )
+position = Vector2( 965, -4812 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle15" parent="." index="20" instance=ExtResource( 2 )]
 
-position = Vector2( 164, -2000 )
+position = Vector2( 164, -4677 )
 velocity = 600.0
 
 [node name="enemy_circle41" parent="." index="21" instance=ExtResource( 2 )]
 
-position = Vector2( 917, -2135 )
+position = Vector2( 917, -4812 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle19" parent="." index="22" instance=ExtResource( 2 )]
 
-position = Vector2( 117, -2000 )
+position = Vector2( 117, -4677 )
 velocity = 600.0
 
 [node name="enemy_circle39" parent="." index="23" instance=ExtResource( 2 )]
 
-position = Vector2( 870, -2135 )
+position = Vector2( 870, -4812 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle25" parent="." index="24" instance=ExtResource( 2 )]
 
-position = Vector2( 70, -2000 )
+position = Vector2( 70, -4677 )
 velocity = 600.0
 
 [node name="enemy_circle57" parent="." index="25" instance=ExtResource( 2 )]
 
-position = Vector2( 823, -2135 )
+position = Vector2( 823, -4812 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle32" parent="." index="26" instance=ExtResource( 2 )]
 
-position = Vector2( 23, -2000 )
+position = Vector2( 23, -4677 )
 velocity = 600.0
 
 [node name="enemy_circle52" parent="." index="27" instance=ExtResource( 2 )]
 
-position = Vector2( 776, -2135 )
+position = Vector2( 776, -4812 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle3" parent="." index="28" instance=ExtResource( 2 )]
 
-position = Vector2( 260, -2050 )
+position = Vector2( 260, -4727 )
 velocity = 600.0
 
 [node name="enemy_circle71" parent="." index="29" instance=ExtResource( 2 )]
 
-position = Vector2( 1013, -2185 )
+position = Vector2( 1013, -4862 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle12" parent="." index="30" instance=ExtResource( 2 )]
 
-position = Vector2( 212, -2050 )
+position = Vector2( 212, -4727 )
 velocity = 600.0
 
 [node name="enemy_circle37" parent="." index="31" instance=ExtResource( 2 )]
 
-position = Vector2( 965, -2185 )
+position = Vector2( 965, -4862 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle13" parent="." index="32" instance=ExtResource( 2 )]
 
-position = Vector2( 164, -2050 )
+position = Vector2( 164, -4727 )
 velocity = 600.0
 
 [node name="enemy_circle46" parent="." index="33" instance=ExtResource( 2 )]
 
-position = Vector2( 917, -2185 )
+position = Vector2( 917, -4862 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle22" parent="." index="34" instance=ExtResource( 2 )]
 
-position = Vector2( 117, -2050 )
+position = Vector2( 117, -4727 )
 velocity = 600.0
 
 [node name="enemy_circle56" parent="." index="35" instance=ExtResource( 2 )]
 
-position = Vector2( 870, -2185 )
+position = Vector2( 870, -4862 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle29" parent="." index="36" instance=ExtResource( 2 )]
 
-position = Vector2( 70, -2050 )
+position = Vector2( 70, -4727 )
 velocity = 600.0
 
 [node name="enemy_circle60" parent="." index="37" instance=ExtResource( 2 )]
 
-position = Vector2( 823, -2185 )
+position = Vector2( 823, -4862 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle35" parent="." index="38" instance=ExtResource( 2 )]
 
-position = Vector2( 23, -2050 )
+position = Vector2( 23, -4727 )
 velocity = 600.0
 
 [node name="enemy_circle68" parent="." index="39" instance=ExtResource( 2 )]
 
-position = Vector2( 776, -2185 )
+position = Vector2( 776, -4862 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle4" parent="." index="40" instance=ExtResource( 2 )]
 
-position = Vector2( 260, -2100 )
+position = Vector2( 260, -4777 )
 velocity = 600.0
 
 [node name="enemy_circle66" parent="." index="41" instance=ExtResource( 2 )]
 
-position = Vector2( 1013, -2235 )
+position = Vector2( 1013, -4912 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle9" parent="." index="42" instance=ExtResource( 2 )]
 
-position = Vector2( 212, -2100 )
+position = Vector2( 212, -4777 )
 velocity = 600.0
 
 [node name="enemy_circle42" parent="." index="43" instance=ExtResource( 2 )]
 
-position = Vector2( 965, -2235 )
+position = Vector2( 965, -4912 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle16" parent="." index="44" instance=ExtResource( 2 )]
 
-position = Vector2( 164, -2100 )
+position = Vector2( 164, -4777 )
 velocity = 600.0
 
 [node name="enemy_circle44" parent="." index="45" instance=ExtResource( 2 )]
 
-position = Vector2( 917, -2235 )
+position = Vector2( 917, -4912 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle20" parent="." index="46" instance=ExtResource( 2 )]
 
-position = Vector2( 117, -2100 )
+position = Vector2( 117, -4777 )
 velocity = 600.0
 
 [node name="enemy_circle50" parent="." index="47" instance=ExtResource( 2 )]
 
-position = Vector2( 870, -2235 )
+position = Vector2( 870, -4912 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle26" parent="." index="48" instance=ExtResource( 2 )]
 
-position = Vector2( 70, -2100 )
+position = Vector2( 70, -4777 )
 velocity = 600.0
 
 [node name="enemy_circle53" parent="." index="49" instance=ExtResource( 2 )]
 
-position = Vector2( 823, -2235 )
+position = Vector2( 823, -4912 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle31" parent="." index="50" instance=ExtResource( 2 )]
 
-position = Vector2( 23, -2100 )
+position = Vector2( 23, -4777 )
 velocity = 600.0
 
 [node name="enemy_circle63" parent="." index="51" instance=ExtResource( 2 )]
 
-position = Vector2( 776, -2235 )
+position = Vector2( 776, -4912 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle5" parent="." index="52" instance=ExtResource( 2 )]
 
-position = Vector2( 260, -2150 )
+position = Vector2( 260, -4827 )
 velocity = 600.0
 
 [node name="enemy_circle65" parent="." index="53" instance=ExtResource( 2 )]
 
-position = Vector2( 1013, -2285 )
+position = Vector2( 1013, -4962 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle8" parent="." index="54" instance=ExtResource( 2 )]
 
-position = Vector2( 212, -2150 )
+position = Vector2( 212, -4827 )
 velocity = 600.0
 
 [node name="enemy_circle49" parent="." index="55" instance=ExtResource( 2 )]
 
-position = Vector2( 965, -2285 )
+position = Vector2( 965, -4962 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle18" parent="." index="56" instance=ExtResource( 2 )]
 
-position = Vector2( 164, -2150 )
+position = Vector2( 164, -4827 )
 velocity = 600.0
 
 [node name="enemy_circle48" parent="." index="57" instance=ExtResource( 2 )]
 
-position = Vector2( 917, -2285 )
+position = Vector2( 917, -4962 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle24" parent="." index="58" instance=ExtResource( 2 )]
 
-position = Vector2( 117, -2150 )
+position = Vector2( 117, -4827 )
 velocity = 600.0
 
 [node name="enemy_circle55" parent="." index="59" instance=ExtResource( 2 )]
 
-position = Vector2( 870, -2285 )
+position = Vector2( 870, -4962 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle28" parent="." index="60" instance=ExtResource( 2 )]
 
-position = Vector2( 70, -2150 )
+position = Vector2( 70, -4827 )
 velocity = 600.0
 
 [node name="enemy_circle59" parent="." index="61" instance=ExtResource( 2 )]
 
-position = Vector2( 823, -2285 )
+position = Vector2( 823, -4962 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle34" parent="." index="62" instance=ExtResource( 2 )]
 
-position = Vector2( 23, -2150 )
+position = Vector2( 23, -4827 )
 velocity = 600.0
 
 [node name="enemy_circle72" parent="." index="63" instance=ExtResource( 2 )]
 
-position = Vector2( 776, -2285 )
+position = Vector2( 776, -4962 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle6" parent="." index="64" instance=ExtResource( 2 )]
 
-position = Vector2( 260, -2200 )
+position = Vector2( 260, -4877 )
 velocity = 600.0
 
 [node name="enemy_circle67" parent="." index="65" instance=ExtResource( 2 )]
 
-position = Vector2( 1013, -2335 )
+position = Vector2( 1013, -5012 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle10" parent="." index="66" instance=ExtResource( 2 )]
 
-position = Vector2( 212, -2200 )
+position = Vector2( 212, -4877 )
 velocity = 600.0
 
 [node name="enemy_circle43" parent="." index="67" instance=ExtResource( 2 )]
 
-position = Vector2( 965, -2335 )
+position = Vector2( 965, -5012 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle17" parent="." index="68" instance=ExtResource( 2 )]
 
-position = Vector2( 164, -2200 )
+position = Vector2( 164, -4877 )
 velocity = 600.0
 
 [node name="enemy_circle47" parent="." index="69" instance=ExtResource( 2 )]
 
-position = Vector2( 917, -2335 )
+position = Vector2( 917, -5012 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle23" parent="." index="70" instance=ExtResource( 2 )]
 
-position = Vector2( 117, -2200 )
+position = Vector2( 117, -4877 )
 velocity = 600.0
 
 [node name="enemy_circle61" parent="." index="71" instance=ExtResource( 2 )]
 
-position = Vector2( 870, -2335 )
+position = Vector2( 870, -5012 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle30" parent="." index="72" instance=ExtResource( 2 )]
 
-position = Vector2( 70, -2200 )
+position = Vector2( 70, -4877 )
 velocity = 600.0
 
 [node name="enemy_circle62" parent="." index="73" instance=ExtResource( 2 )]
 
-position = Vector2( 823, -2335 )
+position = Vector2( 823, -5012 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
 [node name="enemy_circle36" parent="." index="74" instance=ExtResource( 2 )]
 
-position = Vector2( 23, -2200 )
+position = Vector2( 23, -4877 )
 velocity = 600.0
 
 [node name="enemy_circle70" parent="." index="75" instance=ExtResource( 2 )]
 
-position = Vector2( 776, -2335 )
+position = Vector2( 776, -5012 )
 rotation = 3.14159
 velocity = 600.0
 turn_speed = -1.0
 
-[node name="enemy_grunt" parent="." index="76" instance=ExtResource( 3 )]
+[node name="enemy_grunt127" parent="." index="77" instance=ExtResource( 3 )]
 
-position = Vector2( 40, -1600 )
+position = Vector2( -60, -4752 )
 rotation = 1.309
 
-[node name="enemy_grunt110" parent="." index="77" instance=ExtResource( 3 )]
+[node name="enemy_grunt131" parent="." index="78" instance=ExtResource( 3 )]
 
-position = Vector2( 573, -1600 )
+position = Vector2( 1159.19, -4866.81 )
 rotation = 1.8326
 
-[node name="enemy_grunt13" parent="." index="78" instance=ExtResource( 3 )]
+[node name="enemy_grunt129" parent="." index="79" instance=ExtResource( 3 )]
 
-position = Vector2( 40, -1553 )
+position = Vector2( -115, -4752 )
 rotation = 1.309
 
-[node name="enemy_grunt84" parent="." index="79" instance=ExtResource( 3 )]
+[node name="enemy_grunt132" parent="." index="80" instance=ExtResource( 3 )]
 
-position = Vector2( 573, -1553 )
+position = Vector2( 1104.19, -4866.81 )
 rotation = 1.8326
 
-[node name="enemy_grunt16" parent="." index="80" instance=ExtResource( 3 )]
+[node name="enemy_grunt128" parent="." index="81" instance=ExtResource( 3 )]
 
-position = Vector2( 40, -1506 )
+position = Vector2( -60, -4827 )
 rotation = 1.309
 
-[node name="enemy_grunt81" parent="." index="81" instance=ExtResource( 3 )]
+[node name="enemy_grunt133" parent="." index="82" instance=ExtResource( 3 )]
 
-position = Vector2( 573, -1506 )
+position = Vector2( 1159.19, -4941.81 )
 rotation = 1.8326
 
-[node name="enemy_grunt23" parent="." index="82" instance=ExtResource( 3 )]
+[node name="enemy_grunt130" parent="." index="83" instance=ExtResource( 3 )]
 
-position = Vector2( 40, -1459 )
+position = Vector2( -115, -4827 )
 rotation = 1.309
 
-[node name="enemy_grunt104" parent="." index="83" instance=ExtResource( 3 )]
+[node name="enemy_grunt134" parent="." index="84" instance=ExtResource( 3 )]
 
-position = Vector2( 573, -1459 )
+position = Vector2( 1104.19, -4941.81 )
 rotation = 1.8326
 
-[node name="enemy_grunt35" parent="." index="84" instance=ExtResource( 3 )]
+[node name="enemy_grunt13" parent="." index="85" instance=ExtResource( 3 )]
 
-position = Vector2( 40, -1412 )
+position = Vector2( 40, -4230 )
 rotation = 1.309
 
-[node name="enemy_grunt75" parent="." index="85" instance=ExtResource( 3 )]
+[node name="enemy_grunt84" parent="." index="86" instance=ExtResource( 3 )]
 
-position = Vector2( 573, -1412 )
+position = Vector2( 573, -4230 )
 rotation = 1.8326
 
-[node name="enemy_grunt42" parent="." index="86" instance=ExtResource( 3 )]
+[node name="enemy_grunt16" parent="." index="87" instance=ExtResource( 3 )]
 
-position = Vector2( 40, -1365 )
+position = Vector2( 40, -4183 )
 rotation = 1.309
 
-[node name="enemy_grunt91" parent="." index="87" instance=ExtResource( 3 )]
+[node name="enemy_grunt81" parent="." index="88" instance=ExtResource( 3 )]
 
-position = Vector2( 573, -1365 )
+position = Vector2( 573, -4183 )
 rotation = 1.8326
 
-[node name="enemy_grunt48" parent="." index="88" instance=ExtResource( 3 )]
+[node name="enemy_grunt23" parent="." index="89" instance=ExtResource( 3 )]
 
-position = Vector2( 40, -1318 )
+position = Vector2( 40, -4136 )
 rotation = 1.309
 
-[node name="enemy_grunt115" parent="." index="89" instance=ExtResource( 3 )]
+[node name="enemy_grunt104" parent="." index="90" instance=ExtResource( 3 )]
 
-position = Vector2( 573, -1318 )
+position = Vector2( 573, -4136 )
 rotation = 1.8326
 
-[node name="enemy_grunt56" parent="." index="90" instance=ExtResource( 3 )]
+[node name="enemy_grunt35" parent="." index="91" instance=ExtResource( 3 )]
 
-position = Vector2( 40, -1271 )
+position = Vector2( 40, -4089 )
 rotation = 1.309
 
-[node name="enemy_grunt121" parent="." index="91" instance=ExtResource( 3 )]
+[node name="enemy_grunt75" parent="." index="92" instance=ExtResource( 3 )]
 
-position = Vector2( 573, -1271 )
+position = Vector2( 573, -4089 )
 rotation = 1.8326
 
-[node name="enemy_grunt63" parent="." index="92" instance=ExtResource( 3 )]
+[node name="enemy_grunt42" parent="." index="93" instance=ExtResource( 3 )]
 
-position = Vector2( 40, -1224 )
+position = Vector2( 40, -4042 )
 rotation = 1.309
 
-[node name="enemy_grunt124" parent="." index="93" instance=ExtResource( 3 )]
+[node name="enemy_grunt91" parent="." index="94" instance=ExtResource( 3 )]
 
-position = Vector2( 573, -1224 )
+position = Vector2( 573, -4042 )
 rotation = 1.8326
 
-[node name="enemy_grunt2" parent="." index="94" instance=ExtResource( 3 )]
+[node name="enemy_grunt48" parent="." index="95" instance=ExtResource( 3 )]
 
-position = Vector2( 110, -1600 )
+position = Vector2( 40, -3995 )
 rotation = 1.309
 
-[node name="enemy_grunt111" parent="." index="95" instance=ExtResource( 3 )]
+[node name="enemy_grunt115" parent="." index="96" instance=ExtResource( 3 )]
 
-position = Vector2( 643, -1600 )
+position = Vector2( 573, -3995 )
 rotation = 1.8326
 
-[node name="enemy_grunt14" parent="." index="96" instance=ExtResource( 3 )]
+[node name="enemy_grunt56" parent="." index="97" instance=ExtResource( 3 )]
 
-position = Vector2( 110, -1553 )
+position = Vector2( 40, -3948 )
 rotation = 1.309
 
-[node name="enemy_grunt87" parent="." index="97" instance=ExtResource( 3 )]
+[node name="enemy_grunt121" parent="." index="98" instance=ExtResource( 3 )]
 
-position = Vector2( 643, -1553 )
+position = Vector2( 573, -3948 )
 rotation = 1.8326
 
-[node name="enemy_grunt18" parent="." index="98" instance=ExtResource( 3 )]
+[node name="enemy_grunt63" parent="." index="99" instance=ExtResource( 3 )]
 
-position = Vector2( 110, -1506 )
+position = Vector2( 40, -3898 )
 rotation = 1.309
 
-[node name="enemy_grunt106" parent="." index="99" instance=ExtResource( 3 )]
+[node name="enemy_grunt124" parent="." index="100" instance=ExtResource( 3 )]
 
-position = Vector2( 643, -1506 )
+position = Vector2( 573, -3898 )
 rotation = 1.8326
 
-[node name="enemy_grunt28" parent="." index="100" instance=ExtResource( 3 )]
+[node name="enemy_grunt14" parent="." index="101" instance=ExtResource( 3 )]
 
-position = Vector2( 110, -1459 )
+position = Vector2( 110, -4230 )
 rotation = 1.309
 
-[node name="enemy_grunt103" parent="." index="101" instance=ExtResource( 3 )]
+[node name="enemy_grunt87" parent="." index="102" instance=ExtResource( 3 )]
 
-position = Vector2( 643, -1459 )
+position = Vector2( 643, -4230 )
 rotation = 1.8326
 
-[node name="enemy_grunt34" parent="." index="102" instance=ExtResource( 3 )]
+[node name="enemy_grunt18" parent="." index="103" instance=ExtResource( 3 )]
 
-position = Vector2( 110, -1412 )
+position = Vector2( 110, -4183 )
 rotation = 1.309
 
-[node name="enemy_grunt70" parent="." index="103" instance=ExtResource( 3 )]
+[node name="enemy_grunt106" parent="." index="104" instance=ExtResource( 3 )]
 
-position = Vector2( 643, -1412 )
+position = Vector2( 643, -4183 )
 rotation = 1.8326
 
-[node name="enemy_grunt38" parent="." index="104" instance=ExtResource( 3 )]
+[node name="enemy_grunt28" parent="." index="105" instance=ExtResource( 3 )]
 
-position = Vector2( 110, -1365 )
+position = Vector2( 110, -4136 )
 rotation = 1.309
 
-[node name="enemy_grunt65" parent="." index="105" instance=ExtResource( 3 )]
+[node name="enemy_grunt103" parent="." index="106" instance=ExtResource( 3 )]
 
-position = Vector2( 643, -1365 )
+position = Vector2( 643, -4136 )
 rotation = 1.8326
 
-[node name="enemy_grunt43" parent="." index="106" instance=ExtResource( 3 )]
+[node name="enemy_grunt34" parent="." index="107" instance=ExtResource( 3 )]
 
-position = Vector2( 110, -1318 )
+position = Vector2( 110, -4089 )
 rotation = 1.309
 
-[node name="enemy_grunt92" parent="." index="107" instance=ExtResource( 3 )]
+[node name="enemy_grunt70" parent="." index="108" instance=ExtResource( 3 )]
 
-position = Vector2( 643, -1318 )
+position = Vector2( 643, -4089 )
 rotation = 1.8326
 
-[node name="enemy_grunt50" parent="." index="108" instance=ExtResource( 3 )]
+[node name="enemy_grunt38" parent="." index="109" instance=ExtResource( 3 )]
 
-position = Vector2( 110, -1271 )
+position = Vector2( 110, -4042 )
 rotation = 1.309
 
-[node name="enemy_grunt107" parent="." index="109" instance=ExtResource( 3 )]
+[node name="enemy_grunt65" parent="." index="110" instance=ExtResource( 3 )]
 
-position = Vector2( 643, -1271 )
+position = Vector2( 643, -4042 )
 rotation = 1.8326
 
-[node name="enemy_grunt58" parent="." index="110" instance=ExtResource( 3 )]
+[node name="enemy_grunt43" parent="." index="111" instance=ExtResource( 3 )]
 
-position = Vector2( 110, -1224 )
+position = Vector2( 110, -3995 )
 rotation = 1.309
 
-[node name="enemy_grunt116" parent="." index="111" instance=ExtResource( 3 )]
+[node name="enemy_grunt92" parent="." index="112" instance=ExtResource( 3 )]
 
-position = Vector2( 643, -1224 )
+position = Vector2( 643, -3995 )
 rotation = 1.8326
 
-[node name="enemy_grunt3" parent="." index="112" instance=ExtResource( 3 )]
+[node name="enemy_grunt50" parent="." index="113" instance=ExtResource( 3 )]
 
-position = Vector2( 180, -1600 )
+position = Vector2( 110, -3948 )
 rotation = 1.309
 
-[node name="enemy_grunt79" parent="." index="113" instance=ExtResource( 3 )]
+[node name="enemy_grunt107" parent="." index="114" instance=ExtResource( 3 )]
 
-position = Vector2( 713, -1600 )
+position = Vector2( 643, -3948 )
 rotation = 1.8326
 
-[node name="enemy_grunt8" parent="." index="114" instance=ExtResource( 3 )]
+[node name="enemy_grunt58" parent="." index="115" instance=ExtResource( 3 )]
 
-position = Vector2( 180, -1553 )
+position = Vector2( 110, -3898 )
 rotation = 1.309
 
-[node name="enemy_grunt78" parent="." index="115" instance=ExtResource( 3 )]
+[node name="enemy_grunt116" parent="." index="116" instance=ExtResource( 3 )]
 
-position = Vector2( 713, -1553 )
+position = Vector2( 643, -3898 )
 rotation = 1.8326
 
-[node name="enemy_grunt15" parent="." index="116" instance=ExtResource( 3 )]
+[node name="enemy_grunt8" parent="." index="117" instance=ExtResource( 3 )]
 
-position = Vector2( 180, -1506 )
+position = Vector2( 180, -4230 )
 rotation = 1.309
 
-[node name="enemy_grunt77" parent="." index="117" instance=ExtResource( 3 )]
+[node name="enemy_grunt78" parent="." index="118" instance=ExtResource( 3 )]
 
-position = Vector2( 713, -1506 )
+position = Vector2( 713, -4230 )
 rotation = 1.8326
 
-[node name="enemy_grunt22" parent="." index="118" instance=ExtResource( 3 )]
+[node name="enemy_grunt15" parent="." index="119" instance=ExtResource( 3 )]
 
-position = Vector2( 180, -1459 )
+position = Vector2( 180, -4183 )
 rotation = 1.309
 
-[node name="enemy_grunt96" parent="." index="119" instance=ExtResource( 3 )]
+[node name="enemy_grunt77" parent="." index="120" instance=ExtResource( 3 )]
 
-position = Vector2( 713, -1459 )
+position = Vector2( 713, -4183 )
 rotation = 1.8326
 
-[node name="enemy_grunt29" parent="." index="120" instance=ExtResource( 3 )]
+[node name="enemy_grunt22" parent="." index="121" instance=ExtResource( 3 )]
 
-position = Vector2( 180, -1412 )
+position = Vector2( 180, -4136 )
 rotation = 1.309
 
-[node name="enemy_grunt72" parent="." index="121" instance=ExtResource( 3 )]
+[node name="enemy_grunt96" parent="." index="122" instance=ExtResource( 3 )]
 
-position = Vector2( 713, -1412 )
+position = Vector2( 713, -4136 )
 rotation = 1.8326
 
-[node name="enemy_grunt39" parent="." index="122" instance=ExtResource( 3 )]
+[node name="enemy_grunt29" parent="." index="123" instance=ExtResource( 3 )]
 
-position = Vector2( 180, -1365 )
+position = Vector2( 180, -4089 )
 rotation = 1.309
 
-[node name="enemy_grunt66" parent="." index="123" instance=ExtResource( 3 )]
+[node name="enemy_grunt72" parent="." index="124" instance=ExtResource( 3 )]
 
-position = Vector2( 713, -1365 )
+position = Vector2( 713, -4089 )
 rotation = 1.8326
 
-[node name="enemy_grunt44" parent="." index="124" instance=ExtResource( 3 )]
+[node name="enemy_grunt39" parent="." index="125" instance=ExtResource( 3 )]
 
-position = Vector2( 180, -1318 )
+position = Vector2( 180, -4042 )
 rotation = 1.309
 
-[node name="enemy_grunt93" parent="." index="125" instance=ExtResource( 3 )]
+[node name="enemy_grunt66" parent="." index="126" instance=ExtResource( 3 )]
 
-position = Vector2( 713, -1318 )
+position = Vector2( 713, -4042 )
 rotation = 1.8326
 
-[node name="enemy_grunt51" parent="." index="126" instance=ExtResource( 3 )]
+[node name="enemy_grunt44" parent="." index="127" instance=ExtResource( 3 )]
 
-position = Vector2( 180, -1271 )
+position = Vector2( 180, -3995 )
 rotation = 1.309
 
-[node name="enemy_grunt108" parent="." index="127" instance=ExtResource( 3 )]
+[node name="enemy_grunt93" parent="." index="128" instance=ExtResource( 3 )]
 
-position = Vector2( 713, -1271 )
+position = Vector2( 713, -3995 )
 rotation = 1.8326
 
-[node name="enemy_grunt59" parent="." index="128" instance=ExtResource( 3 )]
+[node name="enemy_grunt51" parent="." index="129" instance=ExtResource( 3 )]
 
-position = Vector2( 180, -1224 )
+position = Vector2( 180, -3948 )
 rotation = 1.309
 
-[node name="enemy_grunt125" parent="." index="129" instance=ExtResource( 3 )]
+[node name="enemy_grunt108" parent="." index="130" instance=ExtResource( 3 )]
 
-position = Vector2( 713, -1224 )
+position = Vector2( 713, -3948 )
 rotation = 1.8326
 
-[node name="enemy_grunt4" parent="." index="130" instance=ExtResource( 3 )]
+[node name="enemy_grunt59" parent="." index="131" instance=ExtResource( 3 )]
 
-position = Vector2( 250, -1600 )
+position = Vector2( 180, -3898 )
 rotation = 1.309
 
-[node name="enemy_grunt83" parent="." index="131" instance=ExtResource( 3 )]
+[node name="enemy_grunt125" parent="." index="132" instance=ExtResource( 3 )]
 
-position = Vector2( 783, -1600 )
+position = Vector2( 713, -3898 )
 rotation = 1.8326
 
-[node name="enemy_grunt11" parent="." index="132" instance=ExtResource( 3 )]
+[node name="enemy_grunt11" parent="." index="133" instance=ExtResource( 3 )]
 
-position = Vector2( 250, -1553 )
+position = Vector2( 250, -4230 )
 rotation = 1.309
 
-[node name="enemy_grunt90" parent="." index="133" instance=ExtResource( 3 )]
+[node name="enemy_grunt90" parent="." index="134" instance=ExtResource( 3 )]
 
-position = Vector2( 783, -1553 )
+position = Vector2( 783, -4230 )
 rotation = 1.8326
 
-[node name="enemy_grunt21" parent="." index="134" instance=ExtResource( 3 )]
+[node name="enemy_grunt21" parent="." index="135" instance=ExtResource( 3 )]
 
-position = Vector2( 250, -1506 )
+position = Vector2( 250, -4183 )
 rotation = 1.309
 
-[node name="enemy_grunt100" parent="." index="135" instance=ExtResource( 3 )]
+[node name="enemy_grunt100" parent="." index="136" instance=ExtResource( 3 )]
 
-position = Vector2( 783, -1506 )
+position = Vector2( 783, -4183 )
 rotation = 1.8326
 
-[node name="enemy_grunt26" parent="." index="136" instance=ExtResource( 3 )]
+[node name="enemy_grunt26" parent="." index="137" instance=ExtResource( 3 )]
 
-position = Vector2( 250, -1459 )
+position = Vector2( 250, -4136 )
 rotation = 1.309
 
-[node name="enemy_grunt101" parent="." index="137" instance=ExtResource( 3 )]
+[node name="enemy_grunt101" parent="." index="138" instance=ExtResource( 3 )]
 
-position = Vector2( 783, -1459 )
+position = Vector2( 783, -4136 )
 rotation = 1.8326
 
-[node name="enemy_grunt32" parent="." index="138" instance=ExtResource( 3 )]
+[node name="enemy_grunt32" parent="." index="139" instance=ExtResource( 3 )]
 
-position = Vector2( 250, -1412 )
+position = Vector2( 250, -4089 )
 rotation = 1.309
 
-[node name="enemy_grunt73" parent="." index="139" instance=ExtResource( 3 )]
+[node name="enemy_grunt73" parent="." index="140" instance=ExtResource( 3 )]
 
-position = Vector2( 783, -1412 )
+position = Vector2( 783, -4089 )
 rotation = 1.8326
 
-[node name="enemy_grunt40" parent="." index="140" instance=ExtResource( 3 )]
+[node name="enemy_grunt40" parent="." index="141" instance=ExtResource( 3 )]
 
-position = Vector2( 250, -1365 )
+position = Vector2( 250, -4042 )
 rotation = 1.309
 
-[node name="enemy_grunt67" parent="." index="141" instance=ExtResource( 3 )]
+[node name="enemy_grunt67" parent="." index="142" instance=ExtResource( 3 )]
 
-position = Vector2( 783, -1365 )
+position = Vector2( 783, -4042 )
 rotation = 1.8326
 
-[node name="enemy_grunt45" parent="." index="142" instance=ExtResource( 3 )]
+[node name="enemy_grunt45" parent="." index="143" instance=ExtResource( 3 )]
 
-position = Vector2( 250, -1318 )
+position = Vector2( 250, -3995 )
 rotation = 1.309
 
-[node name="enemy_grunt112" parent="." index="143" instance=ExtResource( 3 )]
+[node name="enemy_grunt112" parent="." index="144" instance=ExtResource( 3 )]
 
-position = Vector2( 783, -1318 )
+position = Vector2( 783, -3995 )
 rotation = 1.8326
 
-[node name="enemy_grunt53" parent="." index="144" instance=ExtResource( 3 )]
+[node name="enemy_grunt53" parent="." index="145" instance=ExtResource( 3 )]
 
-position = Vector2( 250, -1271 )
+position = Vector2( 250, -3948 )
 rotation = 1.309
 
-[node name="enemy_grunt120" parent="." index="145" instance=ExtResource( 3 )]
+[node name="enemy_grunt120" parent="." index="146" instance=ExtResource( 3 )]
 
-position = Vector2( 783, -1271 )
+position = Vector2( 783, -3948 )
 rotation = 1.8326
 
-[node name="enemy_grunt62" parent="." index="146" instance=ExtResource( 3 )]
+[node name="enemy_grunt62" parent="." index="147" instance=ExtResource( 3 )]
 
-position = Vector2( 250, -1224 )
+position = Vector2( 250, -3898 )
 rotation = 1.309
 
-[node name="enemy_grunt119" parent="." index="147" instance=ExtResource( 3 )]
+[node name="enemy_grunt119" parent="." index="148" instance=ExtResource( 3 )]
 
-position = Vector2( 783, -1224 )
+position = Vector2( 783, -3898 )
 rotation = 1.8326
 
-[node name="enemy_grunt5" parent="." index="148" instance=ExtResource( 3 )]
+[node name="enemy_grunt9" parent="." index="149" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -1600 )
+position = Vector2( 320, -4230 )
 rotation = 1.309
 
-[node name="enemy_grunt80" parent="." index="149" instance=ExtResource( 3 )]
+[node name="enemy_grunt88" parent="." index="150" instance=ExtResource( 3 )]
 
-position = Vector2( 853, -1600 )
+position = Vector2( 853, -4230 )
 rotation = 1.8326
 
-[node name="enemy_grunt9" parent="." index="150" instance=ExtResource( 3 )]
+[node name="enemy_grunt19" parent="." index="151" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -1553 )
+position = Vector2( 320, -4183 )
 rotation = 1.309
 
-[node name="enemy_grunt88" parent="." index="151" instance=ExtResource( 3 )]
+[node name="enemy_grunt97" parent="." index="152" instance=ExtResource( 3 )]
 
-position = Vector2( 853, -1553 )
+position = Vector2( 853, -4183 )
 rotation = 1.8326
 
-[node name="enemy_grunt19" parent="." index="152" instance=ExtResource( 3 )]
+[node name="enemy_grunt25" parent="." index="153" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -1506 )
+position = Vector2( 320, -4136 )
 rotation = 1.309
 
-[node name="enemy_grunt97" parent="." index="153" instance=ExtResource( 3 )]
+[node name="enemy_grunt99" parent="." index="154" instance=ExtResource( 3 )]
 
-position = Vector2( 853, -1506 )
+position = Vector2( 853, -4136 )
 rotation = 1.8326
 
-[node name="enemy_grunt25" parent="." index="154" instance=ExtResource( 3 )]
+[node name="enemy_grunt31" parent="." index="155" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -1459 )
+position = Vector2( 320, -4089 )
 rotation = 1.309
 
-[node name="enemy_grunt99" parent="." index="155" instance=ExtResource( 3 )]
+[node name="enemy_grunt74" parent="." index="156" instance=ExtResource( 3 )]
 
-position = Vector2( 853, -1459 )
+position = Vector2( 853, -4089 )
 rotation = 1.8326
 
-[node name="enemy_grunt31" parent="." index="156" instance=ExtResource( 3 )]
+[node name="enemy_grunt41" parent="." index="157" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -1412 )
+position = Vector2( 320, -4042 )
 rotation = 1.309
 
-[node name="enemy_grunt74" parent="." index="157" instance=ExtResource( 3 )]
+[node name="enemy_grunt94" parent="." index="158" instance=ExtResource( 3 )]
 
-position = Vector2( 853, -1412 )
+position = Vector2( 853, -4042 )
 rotation = 1.8326
 
-[node name="enemy_grunt41" parent="." index="158" instance=ExtResource( 3 )]
+[node name="enemy_grunt49" parent="." index="159" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -1365 )
+position = Vector2( 320, -3995 )
 rotation = 1.309
 
-[node name="enemy_grunt94" parent="." index="159" instance=ExtResource( 3 )]
+[node name="enemy_grunt109" parent="." index="160" instance=ExtResource( 3 )]
 
-position = Vector2( 853, -1365 )
+position = Vector2( 853, -3995 )
 rotation = 1.8326
 
-[node name="enemy_grunt49" parent="." index="160" instance=ExtResource( 3 )]
+[node name="enemy_grunt52" parent="." index="161" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -1318 )
+position = Vector2( 320, -3948 )
 rotation = 1.309
 
-[node name="enemy_grunt109" parent="." index="161" instance=ExtResource( 3 )]
+[node name="enemy_grunt64" parent="." index="162" instance=ExtResource( 3 )]
 
-position = Vector2( 853, -1318 )
+position = Vector2( 853, -3948 )
 rotation = 1.8326
 
-[node name="enemy_grunt52" parent="." index="162" instance=ExtResource( 3 )]
+[node name="enemy_grunt57" parent="." index="163" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -1271 )
+position = Vector2( 320, -3898 )
 rotation = 1.309
 
-[node name="enemy_grunt64" parent="." index="163" instance=ExtResource( 3 )]
+[node name="enemy_grunt122" parent="." index="164" instance=ExtResource( 3 )]
 
-position = Vector2( 853, -1271 )
+position = Vector2( 853, -3898 )
 rotation = 1.8326
 
-[node name="enemy_grunt57" parent="." index="164" instance=ExtResource( 3 )]
+[node name="enemy_grunt10" parent="." index="165" instance=ExtResource( 3 )]
 
-position = Vector2( 320, -1224 )
+position = Vector2( 390, -4230 )
 rotation = 1.309
 
-[node name="enemy_grunt122" parent="." index="165" instance=ExtResource( 3 )]
+[node name="enemy_grunt89" parent="." index="166" instance=ExtResource( 3 )]
 
-position = Vector2( 853, -1224 )
+position = Vector2( 923, -4230 )
 rotation = 1.8326
 
-[node name="enemy_grunt6" parent="." index="166" instance=ExtResource( 3 )]
+[node name="enemy_grunt20" parent="." index="167" instance=ExtResource( 3 )]
 
-position = Vector2( 390, -1600 )
+position = Vector2( 390, -4183 )
 rotation = 1.309
 
-[node name="enemy_grunt82" parent="." index="167" instance=ExtResource( 3 )]
+[node name="enemy_grunt95" parent="." index="168" instance=ExtResource( 3 )]
 
-position = Vector2( 923, -1600 )
+position = Vector2( 923, -4183 )
 rotation = 1.8326
 
-[node name="enemy_grunt10" parent="." index="168" instance=ExtResource( 3 )]
+[node name="enemy_grunt24" parent="." index="169" instance=ExtResource( 3 )]
 
-position = Vector2( 390, -1553 )
+position = Vector2( 390, -4136 )
 rotation = 1.309
 
-[node name="enemy_grunt89" parent="." index="169" instance=ExtResource( 3 )]
+[node name="enemy_grunt98" parent="." index="170" instance=ExtResource( 3 )]
 
-position = Vector2( 923, -1553 )
+position = Vector2( 923, -4136 )
 rotation = 1.8326
 
-[node name="enemy_grunt20" parent="." index="170" instance=ExtResource( 3 )]
+[node name="enemy_grunt30" parent="." index="171" instance=ExtResource( 3 )]
 
-position = Vector2( 390, -1506 )
+position = Vector2( 390, -4089 )
 rotation = 1.309
 
-[node name="enemy_grunt95" parent="." index="171" instance=ExtResource( 3 )]
+[node name="enemy_grunt69" parent="." index="172" instance=ExtResource( 3 )]
 
-position = Vector2( 923, -1506 )
+position = Vector2( 923, -4089 )
 rotation = 1.8326
 
-[node name="enemy_grunt24" parent="." index="172" instance=ExtResource( 3 )]
+[node name="enemy_grunt37" parent="." index="173" instance=ExtResource( 3 )]
 
-position = Vector2( 390, -1459 )
+position = Vector2( 390, -4042 )
 rotation = 1.309
 
-[node name="enemy_grunt98" parent="." index="173" instance=ExtResource( 3 )]
+[node name="enemy_grunt76" parent="." index="174" instance=ExtResource( 3 )]
 
-position = Vector2( 923, -1459 )
+position = Vector2( 923, -4042 )
 rotation = 1.8326
 
-[node name="enemy_grunt30" parent="." index="174" instance=ExtResource( 3 )]
+[node name="enemy_grunt47" parent="." index="175" instance=ExtResource( 3 )]
 
-position = Vector2( 390, -1412 )
+position = Vector2( 390, -3995 )
 rotation = 1.309
 
-[node name="enemy_grunt69" parent="." index="175" instance=ExtResource( 3 )]
+[node name="enemy_grunt114" parent="." index="176" instance=ExtResource( 3 )]
 
-position = Vector2( 923, -1412 )
+position = Vector2( 923, -3995 )
 rotation = 1.8326
 
-[node name="enemy_grunt37" parent="." index="176" instance=ExtResource( 3 )]
+[node name="enemy_grunt55" parent="." index="177" instance=ExtResource( 3 )]
 
-position = Vector2( 390, -1365 )
+position = Vector2( 390, -3948 )
 rotation = 1.309
 
-[node name="enemy_grunt76" parent="." index="177" instance=ExtResource( 3 )]
+[node name="enemy_grunt117" parent="." index="178" instance=ExtResource( 3 )]
 
-position = Vector2( 923, -1365 )
+position = Vector2( 923, -3948 )
 rotation = 1.8326
 
-[node name="enemy_grunt47" parent="." index="178" instance=ExtResource( 3 )]
+[node name="enemy_grunt60" parent="." index="179" instance=ExtResource( 3 )]
 
-position = Vector2( 390, -1318 )
+position = Vector2( 390, -3898 )
 rotation = 1.309
 
-[node name="enemy_grunt114" parent="." index="179" instance=ExtResource( 3 )]
+[node name="enemy_grunt123" parent="." index="180" instance=ExtResource( 3 )]
 
-position = Vector2( 923, -1318 )
+position = Vector2( 923, -3898 )
 rotation = 1.8326
 
-[node name="enemy_grunt55" parent="." index="180" instance=ExtResource( 3 )]
+[node name="enemy_grunt12" parent="." index="181" instance=ExtResource( 3 )]
 
-position = Vector2( 390, -1271 )
+position = Vector2( 460, -4230 )
 rotation = 1.309
 
-[node name="enemy_grunt117" parent="." index="181" instance=ExtResource( 3 )]
+[node name="enemy_grunt86" parent="." index="182" instance=ExtResource( 3 )]
 
-position = Vector2( 923, -1271 )
+position = Vector2( 993, -4230 )
 rotation = 1.8326
 
-[node name="enemy_grunt60" parent="." index="182" instance=ExtResource( 3 )]
+[node name="enemy_grunt17" parent="." index="183" instance=ExtResource( 3 )]
 
-position = Vector2( 390, -1224 )
+position = Vector2( 460, -4183 )
 rotation = 1.309
 
-[node name="enemy_grunt123" parent="." index="183" instance=ExtResource( 3 )]
+[node name="enemy_grunt105" parent="." index="184" instance=ExtResource( 3 )]
 
-position = Vector2( 923, -1224 )
+position = Vector2( 993, -4183 )
 rotation = 1.8326
 
-[node name="enemy_grunt7" parent="." index="184" instance=ExtResource( 3 )]
+[node name="enemy_grunt27" parent="." index="185" instance=ExtResource( 3 )]
 
-position = Vector2( 460, -1600 )
+position = Vector2( 460, -4136 )
 rotation = 1.309
 
-[node name="enemy_grunt85" parent="." index="185" instance=ExtResource( 3 )]
+[node name="enemy_grunt102" parent="." index="186" instance=ExtResource( 3 )]
 
-position = Vector2( 993, -1600 )
+position = Vector2( 993, -4136 )
 rotation = 1.8326
 
-[node name="enemy_grunt12" parent="." index="186" instance=ExtResource( 3 )]
+[node name="enemy_grunt33" parent="." index="187" instance=ExtResource( 3 )]
 
-position = Vector2( 460, -1553 )
+position = Vector2( 460, -4089 )
 rotation = 1.309
 
-[node name="enemy_grunt86" parent="." index="187" instance=ExtResource( 3 )]
+[node name="enemy_grunt68" parent="." index="188" instance=ExtResource( 3 )]
 
-position = Vector2( 993, -1553 )
+position = Vector2( 993, -4089 )
 rotation = 1.8326
 
-[node name="enemy_grunt17" parent="." index="188" instance=ExtResource( 3 )]
+[node name="enemy_grunt36" parent="." index="189" instance=ExtResource( 3 )]
 
-position = Vector2( 460, -1506 )
+position = Vector2( 460, -4042 )
 rotation = 1.309
 
-[node name="enemy_grunt105" parent="." index="189" instance=ExtResource( 3 )]
+[node name="enemy_grunt71" parent="." index="190" instance=ExtResource( 3 )]
 
-position = Vector2( 993, -1506 )
+position = Vector2( 993, -4042 )
 rotation = 1.8326
 
-[node name="enemy_grunt27" parent="." index="190" instance=ExtResource( 3 )]
+[node name="enemy_grunt46" parent="." index="191" instance=ExtResource( 3 )]
 
-position = Vector2( 460, -1459 )
+position = Vector2( 460, -3995 )
 rotation = 1.309
 
-[node name="enemy_grunt102" parent="." index="191" instance=ExtResource( 3 )]
+[node name="enemy_grunt113" parent="." index="192" instance=ExtResource( 3 )]
 
-position = Vector2( 993, -1459 )
+position = Vector2( 993, -3995 )
 rotation = 1.8326
 
-[node name="enemy_grunt33" parent="." index="192" instance=ExtResource( 3 )]
+[node name="enemy_grunt54" parent="." index="193" instance=ExtResource( 3 )]
 
-position = Vector2( 460, -1412 )
+position = Vector2( 460, -3948 )
 rotation = 1.309
 
-[node name="enemy_grunt68" parent="." index="193" instance=ExtResource( 3 )]
+[node name="enemy_grunt118" parent="." index="194" instance=ExtResource( 3 )]
 
-position = Vector2( 993, -1412 )
+position = Vector2( 993, -3948 )
 rotation = 1.8326
 
-[node name="enemy_grunt36" parent="." index="194" instance=ExtResource( 3 )]
+[node name="enemy_grunt61" parent="." index="195" instance=ExtResource( 3 )]
 
-position = Vector2( 460, -1365 )
+position = Vector2( 460, -3898 )
 rotation = 1.309
 
-[node name="enemy_grunt71" parent="." index="195" instance=ExtResource( 3 )]
+[node name="enemy_grunt126" parent="." index="196" instance=ExtResource( 3 )]
 
-position = Vector2( 993, -1365 )
+position = Vector2( 993, -3898 )
 rotation = 1.8326
 
-[node name="enemy_grunt46" parent="." index="196" instance=ExtResource( 3 )]
+[node name="enemy_large" parent="." index="197" instance=ExtResource( 4 )]
 
-position = Vector2( 460, -1318 )
-rotation = 1.309
-
-[node name="enemy_grunt113" parent="." index="197" instance=ExtResource( 3 )]
-
-position = Vector2( 993, -1318 )
-rotation = 1.8326
-
-[node name="enemy_grunt54" parent="." index="198" instance=ExtResource( 3 )]
-
-position = Vector2( 460, -1271 )
-rotation = 1.309
-
-[node name="enemy_grunt118" parent="." index="199" instance=ExtResource( 3 )]
-
-position = Vector2( 993, -1271 )
-rotation = 1.8326
-
-[node name="enemy_grunt61" parent="." index="200" instance=ExtResource( 3 )]
-
-position = Vector2( 460, -1224 )
-rotation = 1.309
-
-[node name="enemy_grunt126" parent="." index="201" instance=ExtResource( 3 )]
-
-position = Vector2( 993, -1224 )
-rotation = 1.8326
-
-[node name="enemy_large" parent="." index="202" instance=ExtResource( 4 )]
-
-position = Vector2( 560.923, -3258.9 )
-
-[node name="enemy_sneaky" parent="." index="203" instance=ExtResource( 5 )]
-
-position = Vector2( 628.716, -3286.9 )
-
-[node name="enemy_wavy" parent="." index="204" instance=ExtResource( 6 )]
-
-position = Vector2( 548.558, -3052.05 )
+position = Vector2( 518.419, -4478.56 )
 rotation = 1.5708
+velocity = 150.0
+
+[node name="enemy_large2" parent="." index="198" instance=ExtResource( 4 )]
+
+position = Vector2( 35, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large23" parent="." index="199" instance=ExtResource( 4 )]
+
+position = Vector2( 75, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large3" parent="." index="200" instance=ExtResource( 4 )]
+
+position = Vector2( 115, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large20" parent="." index="201" instance=ExtResource( 4 )]
+
+position = Vector2( 155, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large4" parent="." index="202" instance=ExtResource( 4 )]
+
+position = Vector2( 195, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large17" parent="." index="203" instance=ExtResource( 4 )]
+
+position = Vector2( 235, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large5" parent="." index="204" instance=ExtResource( 4 )]
+
+position = Vector2( 275, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large21" parent="." index="205" instance=ExtResource( 4 )]
+
+position = Vector2( 315, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large6" parent="." index="206" instance=ExtResource( 4 )]
+
+position = Vector2( 355, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large16" parent="." index="207" instance=ExtResource( 4 )]
+
+position = Vector2( 395, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large7" parent="." index="208" instance=ExtResource( 4 )]
+
+position = Vector2( 435, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large18" parent="." index="209" instance=ExtResource( 4 )]
+
+position = Vector2( 475, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large8" parent="." index="210" instance=ExtResource( 4 )]
+
+position = Vector2( 515, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large24" parent="." index="211" instance=ExtResource( 4 )]
+
+position = Vector2( 555, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large9" parent="." index="212" instance=ExtResource( 4 )]
+
+position = Vector2( 595, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large25" parent="." index="213" instance=ExtResource( 4 )]
+
+position = Vector2( 635, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large10" parent="." index="214" instance=ExtResource( 4 )]
+
+position = Vector2( 675, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large15" parent="." index="215" instance=ExtResource( 4 )]
+
+position = Vector2( 715, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large11" parent="." index="216" instance=ExtResource( 4 )]
+
+position = Vector2( 755, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large22" parent="." index="217" instance=ExtResource( 4 )]
+
+position = Vector2( 795, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large12" parent="." index="218" instance=ExtResource( 4 )]
+
+position = Vector2( 835, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large26" parent="." index="219" instance=ExtResource( 4 )]
+
+position = Vector2( 875, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large13" parent="." index="220" instance=ExtResource( 4 )]
+
+position = Vector2( 915, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large19" parent="." index="221" instance=ExtResource( 4 )]
+
+position = Vector2( 955, -7352 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_large14" parent="." index="222" instance=ExtResource( 4 )]
+
+position = Vector2( 995, -7199 )
+rotation = 1.5708
+velocity = 75.0
+
+[node name="enemy_sneaky" parent="." index="223" instance=ExtResource( 5 )]
+
+position = Vector2( 34, -6177 )
+rotation = 0.349066
+velocity = 700.0
+attack_delay = 3.0
+turn_speed = 1.0
+
+[node name="enemy_sneaky4" parent="." index="224" instance=ExtResource( 5 )]
+
+position = Vector2( 34, -6237 )
+rotation = 0.523599
+velocity = 700.0
+attack_delay = 3.0
+turn_speed = 1.0
+
+[node name="enemy_sneaky5" parent="." index="225" instance=ExtResource( 5 )]
+
+position = Vector2( 34, -6303 )
+rotation = 0.698132
+velocity = 700.0
+attack_delay = 3.0
+turn_speed = 1.0
+
+[node name="enemy_sneaky8" parent="." index="226" instance=ExtResource( 5 )]
+
+position = Vector2( 34, -6375 )
+rotation = 0.872665
+velocity = 700.0
+attack_delay = 3.0
+turn_speed = 1.0
+
+[node name="enemy_sneaky2" parent="." index="227" instance=ExtResource( 5 )]
+
+position = Vector2( 977, -6177 )
+rotation = 2.79253
+velocity = 700.0
+attack_delay = 3.0
+turn_speed = 1.0
+
+[node name="enemy_sneaky3" parent="." index="228" instance=ExtResource( 5 )]
+
+position = Vector2( 977, -6237 )
+rotation = 2.61799
+velocity = 700.0
+attack_delay = 3.0
+turn_speed = 1.0
+
+[node name="enemy_sneaky6" parent="." index="229" instance=ExtResource( 5 )]
+
+position = Vector2( 977, -6303 )
+rotation = 2.44346
+velocity = 700.0
+attack_delay = 3.0
+turn_speed = 1.0
+
+[node name="enemy_sneaky7" parent="." index="230" instance=ExtResource( 5 )]
+
+position = Vector2( 977, -6375 )
+rotation = 2.26893
+velocity = 700.0
+attack_delay = 3.0
+turn_speed = 1.0
+
+[node name="enemy_wavy" parent="." index="231" instance=ExtResource( 6 )]
+
+position = Vector2( 550, -5727 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy4" parent="." index="232" instance=ExtResource( 6 )]
+
+position = Vector2( 550, -5786 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy9" parent="." index="233" instance=ExtResource( 6 )]
+
+position = Vector2( 550, -5844 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy11" parent="." index="234" instance=ExtResource( 6 )]
+
+position = Vector2( 550, -5902 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy3" parent="." index="235" instance=ExtResource( 6 )]
+
+position = Vector2( 700, -5727 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy6" parent="." index="236" instance=ExtResource( 6 )]
+
+position = Vector2( 700, -5786 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy8" parent="." index="237" instance=ExtResource( 6 )]
+
+position = Vector2( 700, -5844 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy12" parent="." index="238" instance=ExtResource( 6 )]
+
+position = Vector2( 700, -5902 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy2" parent="." index="239" instance=ExtResource( 6 )]
+
+position = Vector2( 400, -5727 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy5" parent="." index="240" instance=ExtResource( 6 )]
+
+position = Vector2( 400, -5786 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy7" parent="." index="241" instance=ExtResource( 6 )]
+
+position = Vector2( 400, -5844 )
+rotation = 1.5708
+turn_speed = 3.0
+max_turn_angle = 60.0
+
+[node name="enemy_wavy10" parent="." index="242" instance=ExtResource( 6 )]
+
+position = Vector2( 400, -5902 )
+rotation = 1.5708
+turn_speed = 3.0
 max_turn_angle = 60.0
 
 
