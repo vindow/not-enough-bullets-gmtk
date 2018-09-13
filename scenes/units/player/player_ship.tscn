@@ -438,7 +438,6 @@ autostart = false
 
 [node name="thruster_left" type="Sprite" parent="." index="16"]
 
-visible = false
 position = Vector2( -4, 18 )
 texture = ExtResource( 11 )
 vframes = 4
@@ -446,7 +445,6 @@ _sections_unfolded = [ "Animation", "Transform", "Visibility" ]
 
 [node name="thruster_right" type="Sprite" parent="." index="17"]
 
-visible = false
 position = Vector2( 4, 18 )
 scale = Vector2( -1, 1 )
 texture = ExtResource( 11 )

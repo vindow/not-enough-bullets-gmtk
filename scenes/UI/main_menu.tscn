@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/main_menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/Pixeled.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/sounds/menu_jingle.wav" type="AudioStream" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -106,6 +107,15 @@ text = "START"
 flat = true
 align = 1
 _sections_unfolded = [ "Margin", "custom_constants", "custom_fonts" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 3 )
+volume_db = -13.0
+pitch_scale = 0.9
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
 

@@ -64,7 +64,6 @@ rect = Rect2( -32, -32, 64, 64 )
 
 [node name="Particles2D" parent="." index="4"]
 
-modulate = Color( 1, 1, 1, 0 )
 emitting = true
 
 [node name="AnimationPlayer" parent="." index="5"]

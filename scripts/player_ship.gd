@@ -3,7 +3,7 @@ extends Area2D
 var velocity = 350
 var throttled_velocity = 250
 
-var lives = 3
+var lives = 4
 signal life_change(num_lives)
 
 var can_move = true

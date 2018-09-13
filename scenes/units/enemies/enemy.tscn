@@ -535,7 +535,6 @@ _sections_unfolded = [ "Animation", "Visibility" ]
 
 [node name="thruster" type="Sprite" parent="." index="11"]
 
-visible = false
 vframes = 4
 _sections_unfolded = [ "Animation", "Visibility" ]
 
